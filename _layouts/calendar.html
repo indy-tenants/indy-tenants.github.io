@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="page">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div id="calendar"></div>
+
+  <script charset="utf-8">
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarElement = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarElement, {
+            googleCalendarApiKey: "AIzaSyBgJHf2RbircMaTJzfU0-6JR1THPehqEzI",
+            events: {
+                googleCalendarId: "indyevictiondefense@gmail.com",
+
+            },
+            selectable: true,
+        });
+
+        calendar.render();
+    });
+  </script>
+</article>
+
